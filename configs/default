@@ -1,0 +1,8 @@
+#cloud-config
+users:
+  - name: xeon
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC5nilinMmLt3Xub7KJOmuulyfBq2QTmZd3+sjWvAMQgCdh+krDs6BILyRVjR7IrluwSpJu0ZU2w8w5/XkbGQsAxBJuwEzJWKdjPycl/Gr2jnCfjAsqryH4APvxMVdm/D9kUD1l9LSQzbf3O898v9lQ8GsTBeMGOjGmQLjNpAWSkrnoXP4DQNAeTUa0RRKggCkmC9X8LEwbCm1bFfvaKcsQb/RcSwtyLWzQdCHS0VHV/gcw/L0e2wcS9DSXnOVi5VMJsuOI4DnXYMHV9ED7egYk9bkwPz+uZ0eYdOYv1tbgsB3N12nSLQfxbC3VxrXyeDpeUAYjraLDnNFjyJXf+jb5b/6GixyLDmjCYh3vKV9JwTP06Hc2LioNVvUDK0naRtv4BryZs4OkBbynCmIDcW2ub6J3RctHZa0o4enj6QDgDdk28+hz1YGJoAXAEQqizsI3lDqdcicEJ/Q+kkHFitKeCtChAHNMqh0vpxmLR0y6IKkhpHZcYrlZE/063Ax2gzRAXsF+2Sa2vIeXTEfE+p1WfNlvA3x2XvMlkAJv4ig6YogFoMjALThs7O6NhsXiWmPiKSaSVG4O3Wjoi/OwQTtrHCnSARR2aHQIgDzlpuaFUlDVKscdBprB/nB/Lw8Fv36rp7tzUyTyMshwXmMo2tSbVn2Bi95tT6YaqgVDw9GNbQ== v.tyurin.true.studio.ru@gmail.com
