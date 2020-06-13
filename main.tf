@@ -45,7 +45,7 @@ resource "yandex_compute_instance" "balancer" {
     nat_ip_address = local.reserved_ip
   }
   resources {
-    core_fraction = 5
+    core_fraction = 100
     cores = 1
     memory = 2
   }
@@ -60,6 +60,7 @@ resource "yandex_compute_instance" "frontend" {
   platform_id = "standard-v1"
   zone = "ru-central1-a"
   count = 1
+  allow_stopping_for_update = true
 
   boot_disk {
     auto_delete = true
@@ -77,7 +78,7 @@ resource "yandex_compute_instance" "frontend" {
     ip_address = "10.0.0.10"
   }
   resources {
-    core_fraction = 5
+    core_fraction = 100
     cores = 1
     memory = 2
   }
@@ -93,6 +94,7 @@ resource "yandex_compute_instance" "backend" {
   platform_id = "standard-v1"
   zone = "ru-central1-a"
   count = 1
+  allow_stopping_for_update = true
 
   boot_disk {
     auto_delete = true
@@ -110,7 +112,7 @@ resource "yandex_compute_instance" "backend" {
     ip_address = "10.0.0.20"
   }
   resources {
-    core_fraction = 5
+    core_fraction = 100
     cores = 1
     memory = 2
   }
@@ -125,11 +127,12 @@ resource "yandex_compute_instance" "database" {
   platform_id = "standard-v1"
   zone = "ru-central1-a"
   count = 1
+  allow_stopping_for_update = true
 
   resources {
-    core_fraction = 5
+    core_fraction = 100
     cores = 1
-    memory = 2
+    memory = 4
   }
 
   boot_disk {
